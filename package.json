@@ -1,68 +1,72 @@
 {
-    "name": "cexchange",
-    "version": "1.0.5",
-    "description": "Implementation of private and public api's of crypto exchanges",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "test": "jest",
-        "pretest": "./node_modules/.bin/eslint ./ --ignore-path .gitignore --ext .ts,.js",
-        "prepublishOnly": "npm run compile",
-        "compile": "npm run clean && tsc -p .",
-        "watch": "tsc -w -p .",
-        "clean": "rm -rf dist"
+  "name": "cexchange",
+  "version": "1.0.5",
+  "description": "Implementation of private and public api's of crypto exchanges",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "pretest": "./node_modules/.bin/eslint ./ --ignore-path .gitignore --ext .ts,.js",
+    "prepublishOnly": "npm run compile",
+    "compile": "npm run clean && tsc -p .",
+    "watch": "tsc -w -p .",
+    "clean": "rm -rf dist",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleemuddin13/cexchange.git"
+  },
+  "keywords": [
+    "crypto",
+    "exchange",
+    "api",
+    "bitsaa",
+    "tradesatoshi",
+    "poloneix",
+    "ccex",
+    "cryptoexchange",
+    "cryptoapi",
+    "api"
+  ],
+  "author": "Aleem Uddin <aleemuddin966@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aleemuddin13/cexchange/issues"
+  },
+  "homepage": "https://github.com/aleemuddin13/cexchange#readme",
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/aleemuddin13/cexchange.git"
-    },
-    "keywords": [
-        "crypto",
-        "exchange",
-        "api",
-        "bitsaa",
-        "tradesatoshi",
-        "poloneix",
-        "ccex",
-        "cryptoexchange",
-        "cryptoapi",
-        "api"
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
     ],
-    "author": "Aleem Uddin <aleemuddin966@gmail.com>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/aleemuddin13/cexchange/issues"
-    },
-    "homepage": "https://github.com/aleemuddin13/cexchange#readme",
-    "jest": {
-        "verbose": true,
-        "transform": {
-            "^.+\\.tsx?$": "ts-jest"
-        },
-        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-        "moduleFileExtensions": [
-            "ts",
-            "tsx",
-            "js",
-            "jsx",
-            "json",
-            "node"
-        ],
-        "collectCoverage": true
-    },
-    "devDependencies": {
-        "@types/jest": "^22.2.3",
-        "@types/node": "^10.0.6",
-        "coveralls": "^3.0.1",
-        "eslint": "^4.19.1",
-        "eslint-config-airbnb-base": "^12.1.0",
-        "eslint-plugin-import": "^2.11.0",
-        "eslint-plugin-typescript": "^0.12.0",
-        "ts-jest": "^22.4.5",
-        "typescript": "^2.8.3",
-        "typescript-eslint-parser": "^15.0.0"
-    },
-    "dependencies": {
-        "axios": "^0.18.0"
-    }
+    "collectCoverage": true
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^10.0.6",
+    "coveralls": "^3.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-typescript": "^0.12.0",
+    "ts-jest": "^22.4.5",
+    "typescript": "^2.8.3",
+    "typescript-eslint-parser": "^15.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "snyk": "^1.161.1"
+  },
+  "snyk": true
 }
